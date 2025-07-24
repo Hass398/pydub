@@ -1,0 +1,12 @@
+from pydub import AudioSegment
+
+# Load the original user voice sample
+input_path = "/mnt/data/20250724_114113.amr"
+user_voice_sample = AudioSegment.from_file(input_path, format="amr")
+
+# Export it to MP3 format to standardize it for future processing
+output_path = "/mnt/data/user_voice_sample_converted.mp3"
+user_voice_sample.export(output_path, format="mp3")
+
+output_path
+
